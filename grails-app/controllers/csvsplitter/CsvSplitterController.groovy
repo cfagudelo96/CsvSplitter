@@ -20,10 +20,13 @@ class CsvSplitterController {
                 byte[] bytes = archivo.getBytes()
                 if(bytes.length != 0) {
                     try {
-                        def mapaCursos = csvSplitterService.crearMapaCursos(cursos)
+                        def mapaCursos = null
                         String contenido = new String(bytes)
                         def settings = [separatorChar: separador]
                         contenido.toCsvMapReader(settings).each { map ->
+                            if(!mapaCursos) {
+                                mapaCursos = csvSplitterService.crearMapaCursos(cursos, map)
+                            }
                             csvSplitterService.leerLinea(map, mapaCursos)
                         }
                         response.setContentType('APPLICATION/OCTET-STREAM')

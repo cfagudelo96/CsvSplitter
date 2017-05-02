@@ -4906,3 +4906,5 @@ n:290:org/springframework/scripting/ScriptSource
 n:287:org/codehaus/groovy/grails/web/pages/discovery/GroovyPageScriptSource
 n:3359:org/codehaus/groovy/grails/web/pages/discovery/GroovyPageCompiledScriptSource
 n:926:org/apache/tools/zip/ZipFile$1
+n:11683:org/springframework/uaa/client/protobuf/UaaClient$UaaEnvelope$Builder
+n:2511:org/springframework/uaa/client/util/Base64$OutputStream

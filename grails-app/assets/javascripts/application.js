@@ -23,7 +23,7 @@ if (typeof jQuery !== 'undefined') {
 function agregarCurso() {
 	$('#div-cursos').append(
 		'<div class="form-group">' +
-			'<input type="text" name="cursos" required="true" placeholder="Curso" class="form-control" value="">' +
+			'<input type="text" name="cursos" required="true" placeholder="ID del curso" class="form-control" value="">' +
 		'</div>'
 	);
     $('#btn-remover').removeAttr('disabled');

@@ -6,10 +6,12 @@ import org.grails.plugins.csv.CSVWriter
 @Transactional
 class CsvSplitterService {
 
-    def crearMapaCursos(cursos) {
+    def crearMapaCursos(cursos, mapa) {
         def mapaCursos = [:]
-        def encabezados = ['User Id', 'Student Id', 'First Name', 'Last Name', 'Course Id', 'Course Name', 'Column Name', 'Grade',
-                           'Score', 'Availability', 'Last Access Date', 'Last Attempt Date', 'Last Override Date', 'Display Title']
+        def encabezados = mapa.keySet()
+        if(!encabezados.any { it == 'Course Id' }) {
+            throw new Exception("No se encontró una columna llamada 'Course Id'")
+        }
         for(curso in cursos) {
             CSVWriter csvWriter = new CSVWriter(new StringWriter(), {
                 encabezados.each { encabezado ->

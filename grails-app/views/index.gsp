@@ -8,7 +8,7 @@
 		<div class="jumbotron">
 			<h1>Bienvenido a CsvSplitter</h1>
 			<p>
-				Para hacer split de un archivo csv de cursos, selecciona por favor el archivo e ingresa los nombres
+				Para hacer split de un archivo csv de cursos, selecciona por favor el archivo e ingresa los ID
 				de los cursos que deseas obtener en nuevos archivos csv. Agrega cuantos desees!
 			</p>
 		</div>
@@ -36,7 +36,7 @@
 						<h3>Cursos</h3>
 						<div id="div-cursos">
 							<div class="form-group">
-								<g:field type="text" name="cursos" required="${true}" placeholder="Curso" class="form-control"/>
+								<g:field type="text" name="cursos" required="${true}" placeholder="ID del curso" class="form-control"/>
 							</div>
 						</div>
 						<div class="btn-group" role="group">
